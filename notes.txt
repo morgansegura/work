@@ -1,0 +1,48 @@
+Portfolio
+- Flux structure & Gulp
+- Flux Setup & Prep
+- Search form component
+- Working with the API
+- Display Results
+
+Mobile
+- 2 Websites
+- 2 Mobile Apps
+
+Mobile Tools
+- jQuery Mobile
+- Cordova
+
+Desktop
+- 4 Websites
+- 2 Spas
+- 1 Wordpress website
+- 1 Wordpress Skeleton template
+
+Desktop Tools
+- React.js, Angular4, jQuery
+- Bootstrap4, CSS3, Foundation
+- PHP, Rails, .Net
+- knockout.js, backbone.js, node.js
+
+Additional Code
+- 4 styled forms
+- 4 cool CSS examples
+- 4 cool jQuery examples
+- 4 cool materials examples
+- 1 quiz
+- 1 game
+- 3 email templates
+- 3 AJAX/JSON API call examples
+- Search with persistent data
+- 3 CRUD examples
+
+Portfolio website
+- bio section, code section, design section,
+  skills section, random quote section, key terms
+  definition section
+
+Additional Tools
+- gulp, webpack
+
+SEO, A/B testing, web standards
