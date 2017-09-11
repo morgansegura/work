@@ -1,1 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
+node_modules
+bower_components
+_build
+npm-debug.log
+.idea
+.editorconfig
