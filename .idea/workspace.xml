@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a9917bf-473c-4ee6-a320-f896886db571" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/.sass-cache/746c8c7ff895d1562927553a161bf4c0b7749b6d/style.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/hamburgers.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/style.copy.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/style.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/avatar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.html.copy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/actions/AppActions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/components/App.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/components/SearchForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/constants/AppConstants.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/dispatcher/AppDispatcher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/scripts/scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/stores/AppStore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/utils/appAPI.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/scss/style.scss" afterPath="$PROJECT_DIR$/app/scss/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="portfolio.iws" />
@@ -47,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="289">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -57,38 +39,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="-935">
               <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/print.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -233,6 +185,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -320,23 +290,23 @@
       <updated>1503623911431</updated>
       <workItem from="1503623914538" duration="96193000" />
       <workItem from="1505059992949" duration="1949000" />
-      <workItem from="1505082961656" duration="10378000" />
+      <workItem from="1505082961656" duration="12698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108520000" />
+    <option name="totallyTimeSpent" value="110840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="833" y="0" width="854" height="1017" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31234258" sideWeight="0.5177066" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31234258" sideWeight="0.48229343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31234258" sideWeight="0.48229343" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31234258" sideWeight="0.5177066" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -579,10 +549,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/style.scss">
+    <entry file="file://$PROJECT_DIR$/app/scss/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -597,24 +575,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="-935">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="289">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>
