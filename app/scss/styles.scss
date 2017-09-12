@@ -1,329 +1,152 @@
+/*! Made with Bones: http://themble.com/bones :) */
 
-@import "compass/reset";
+/******************************************************************
+Site Name: Morgan Segura personal website
+Author: Morgan Segura
 
-// breakpoints
+Stylesheet: Main Stylesheet
 
-$S:     480px;
-$M:     768px;
-$L:     1170px;
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
 
-// media queries
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
 
-@mixin MQ($canvas) {
-  @if $canvas == S {
-    @media only screen and (min-width: $S) { @content; }
-  }
-  @else if $canvas == M {
-    @media only screen and (min-width: $M) { @content; }
-  }
-  @else if $canvas == L {
-    @media only screen and (min-width: $L) { @content; }
-  }
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/grid";
+
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+// alert boxes
+@import "modules/alerts";
+
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+
+  // styles in 481up.scss
+  @import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+
+  // styles in 768up.scss
+  @import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+
+  // styles in 1030up.scss
+  @import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+
+  // styles in 1240up.scss
+  @import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  // styles in 2x.scss
+  @import "breakpoints/2x";
+
+} // end of media query
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+  // styles in print.scss
+  @import "partials/print";
+
 }
+/*********************
+CONTACT MODAL STYLESHEET
+*********************/
+@import "partials/_modal";
 
-// antialiasing mode font rendering
-
-@mixin font-smoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// colors
-
-$color-1: #34383c; // Outer Space
-$color-2: #03bb91; // Caribbean Green
-$color-3: #ffffff; // White
-
-// fonts
-
-$primary-font: 'Source Sans Pro', sans-serif;
-
-/* --------------------------------
-
-Primary style
-
--------------------------------- */
-
-*, *::after, *::before {
-  @include box-sizing(border-box);
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font: {
-    size: 1.6rem;
-    family: $primary-font;
-  }
-  color: $color-1;
-  background-color: $color-3;
-
-  &.overflow-hidden {
-    /* used when modal is visible */
-    overflow: hidden;
-  }
-}
-
-a {
-  color: $color-2;
-  text-decoration: none;
-}
-
-/* --------------------------------
-
-Main Components
-
--------------------------------- */
-
-.cd-section {
-  padding: 2em 5%;
-  text-align: center;
-  background-color: $color-2;
-
-  p {
-    margin: 2em 0;
-    line-height: 1.6;
-    color: $color-3;
-    @include font-smoothing;
-  }
-
-  @include MQ(M) {
-    padding: 4em 10%;
-
-    p {
-      font-size: 1.8rem;
-      line-height: 2;
-    }
-  }
-
-  @include MQ(L) {
-    padding: 4em 20%;
-  }
-}
-
-.cd-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-
-  @include transition(visibility 0s .3s, opacity .3s 0s, z-index 0s .3s);
-
-  &::after {
-    /* gradient overlay at bottom of modal window */
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    pointer-events: none;
-    background: transparent;
-    @include background(linear-gradient(to top,rgba($color-1, 1), rgba($color-1, 0)));
-  }
-
-  .cd-modal-content {
-    height: 100%;
-    width: 100%;
-    padding: 3em 5%;
-    text-align: left;
-    overflow-y: auto;
-    @include font-smoothing;
-  }
-
-  p {
-    color: $color-3;
-    line-height: 1.6;
-    margin: 2em 0;
-  }
-
-  .modal-is-visible & {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-
-    @include transition(visibility 0s 0s, opacity .3s 0s, z-index 0s 0s);
-
-    .cd-modal-content {
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @include MQ(M) {
-
-    .cd-modal-content {
-      padding: 4em 10%;
-    }
-  }
-
-  @include MQ(L) {
-
-    .cd-modal-content {
-      padding: 6em 20%;
-    }
-
-    p {
-      font-size: 2rem;
-      line-height: 2;
-    }
-  }
-}
-
-.cd-modal-action {
-  position: relative;
-
-  .btn, .cd-modal-bg {
-    display: inline-block;
-    height: 4em;
-    background-color: $color-1;
-  }
-
-  .btn {
-    width: 12.5em;
-    border-radius: 5em;
-
-    color: $color-3;
-    line-height: 4em;
-    white-space: nowrap;
-    font-weight: 700;
-    @include font-smoothing;
-
-    @include transition(color .2s .3s, width .3s 0s);
-
-    &.to-circle {
-      width: 4em;
-      color: transparent;
-      @include transition(color .2s 0s, width .3s .2s);
-    }
-  }
-
-  .cd-modal-bg {
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 0;
-    width: 4em;
-    border-radius: 50%;
-    opacity: 0;
-    visibility: hidden;
-    @include transform(translateZ(0));
-    @include transform(translateX(-2em));
-    @include transition(visibility 0s .5s);
-
-    &.is-visible {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-
-.cd-modal-close {
-  position: fixed;
-  z-index: 1;
-  top: 20px;
-  right: 5%;
-
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-
-  background: rgba(#000, .3) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-close_copy.svg) no-repeat center center;
-
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-
-  visibility: hidden;
-  opacity: 0;
-  @include transform(translateZ(0));
-  @include transform(scale(0));
-  @include transition(transform .3s 0s, visibility 0s .3s, opacity .3s 0s);
-
-  .no-touch &:hover {
-    background-color: rgba(#000, .5);
-  }
-
-  .modal-is-visible & {
-    visibility: visible;
-    opacity: 1;
-    @include transition(transform .3s 0s, visibility 0s 0s, opacity .3s 0s);
-    @include transform(scale(1));
-  }
-
-  @include MQ(M) {
-    top: 70px;
-  }
-}
-
-body {
-  position: relative;
-}
-#scrollPosition {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  display: none;
-  padding: 5px 0;
-  background: rgba(0,0,0,.7);
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-}
-
-* {
-  @include box-sizing(border-box);
-}
-
-section {
-  background: #eee;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  overflow: hidden;
-}
-
-.module {
-  width: 48%;
-  min-height: 200px;
-  background: white;
-  position: relative;
-  float: left;
-  padding: 20px;
-  margin-right: 4%;
-  margin-bottom: 4%;
-  &:nth-child(even) {
-    margin-right: 0;
-  }
-  box-shadow: 0 1px 3px rgba(black, 0.2);
-}
-
-body {
-  //background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
-  background-size: cover;
-  padding: 30px;
-}
-
-.come-in {
-  transform: translateY(150px);
-  animation: come-in 0.8s ease forwards;
-}
-.come-in:nth-child(odd) {
-  animation-duration: 0.6s;
-}
-.already-visible {
-  transform: translateY(0);
-  animation: none;
-}
-
-@keyframes come-in {
-  to { transform: translateY(0); }
-}
