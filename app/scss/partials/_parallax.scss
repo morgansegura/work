@@ -1,0 +1,14 @@
+.parallax {
+  position: relative;
+}
+.parallax img {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
+  transform:
+          translateZ(-#{.5 * 2}px)
+          scale(1 + .5 * 2);
+}
